@@ -4,7 +4,7 @@ import pygame
 from src.Common import TrafficStatus, DoubleLane, Lane
 from src.Config import Config
 from src.Entity.TrafficLight import TrafficLight
-from src.Fuzzy import Fuzzy
+#from src.Fuzzy import Fuzzy
 
 
 class TrafficController:
@@ -36,7 +36,7 @@ class TrafficController:
         x = self.screen_height / 2 - self.traffic_light_distance_from_center[1] - self.traffic_light_body_height
         self.create_traffic_light(x, y, Lane.bottom_to_top)
 
-        self.fuzzy = Fuzzy()
+        #self.fuzzy = Fuzzy()
 
         self.latest_green_light_extension = 0
 
@@ -97,8 +97,8 @@ class TrafficController:
         else:
             return self.traffic_lights[Lane.left_to_right].status
 
-    def calculate_fuzzy_score(self, arriving_green_light_car, behind_red_light_car, extension_count):
-        return self.fuzzy.get_extension(arriving_green_light_car, behind_red_light_car, extension_count)
+    #def calculate_fuzzy_score(self, arriving_green_light_car, behind_red_light_car, extension_count):
+    #    return self.fuzzy.get_extension(arriving_green_light_car, behind_red_light_car, extension_count)
 
     def get_current_active_lane(self)->DoubleLane:
         return self.lanes[self.green_lane]
