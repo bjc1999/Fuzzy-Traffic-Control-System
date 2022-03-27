@@ -14,5 +14,5 @@ Install the packages from requirements.txt
 Run the main script using the environment intepreter  
 `python main.py`
 
-# Current Progress
-![Screenshot](https://github.com/ChiaJun03/traffic-fuzzy-control/blob/fuzzy_assignment/images/recording/demo.gif)
+# Screenshot
+![Screenshot](images/recording/demo.gif)
